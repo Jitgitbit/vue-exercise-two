@@ -5,8 +5,12 @@
 </template>
 
 <script>
+import NavBar from './NavBar'
 export default {
   name: 'app',
+  components:{
+    NavBar: NavBar
+  },
   data () {
     return {
       title:'A new Vue App, wohoo ;)'
