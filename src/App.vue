@@ -2,8 +2,8 @@
   <div id="app">
     <h1>{{title}}</h1>
     <NavBar/>
-    <AllFriends/>
-    <OnlineFriends/>
+    <AllFriends :friends="friends"/>
+    <OnlineFriends :friends='friends'/>
   </div>
 </template>
 
@@ -21,7 +21,13 @@ export default {
   },
   data () {
     return {
-      title:'A new Vue App, wohoo ;)'
+      title:'A new Vue App, wohoo ;)',
+      friends:[
+        {name:'Luigi', online: true},
+        {name:'Mario', online: false},
+        {name:'Peter', online: true},
+        {name:'Mark', online: false},
+      ]
     }
   }
 }
