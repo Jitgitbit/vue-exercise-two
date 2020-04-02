@@ -10,7 +10,7 @@ import NavBar from './NavBar'
 export default {
   name: 'app',
   components:{
-    NavBar: NavBar
+    NavBar                                     // ES6 refactoring:         NavBar: NavBar   ==     NavBar    !!!
   },
   data () {
     return {
