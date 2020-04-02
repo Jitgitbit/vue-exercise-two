@@ -1,1 +1,3 @@
 vue init webpack-simple vue-exercise-two
+
+npm install
