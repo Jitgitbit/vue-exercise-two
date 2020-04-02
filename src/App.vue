@@ -2,15 +2,22 @@
   <div id="app">
     <h1>{{title}}</h1>
     <NavBar/>
+    <AllFriends/>
+    <OnlineFriends/>
   </div>
 </template>
 
 <script>
 import NavBar from './NavBar'
+import AllFriends from './AllFriends'
+import OnlineFriends from './OnlineFriends'
+
 export default {
   name: 'app',
-  components:{
-    NavBar                                     // ES6 refactoring:         NavBar: NavBar   ==     NavBar    !!!
+  components:{                        // ES6 refactoring:         NavBar: NavBar   ==     NavBar    !!!
+    NavBar,
+    AllFriends,
+    OnlineFriends                                 
   },
   data () {
     return {
