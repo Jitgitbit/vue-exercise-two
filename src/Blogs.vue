@@ -29,10 +29,13 @@ export default {
     alert('beforeCreated Hook')
   },
   created(){
-    axios.get('https://jsonplaceholder.typicode.com/posts')
+    axios.get('https://jsonplaceholder.typicode.com/postts')
       .then(response => {
         console.log(response)
         this.posts = response.data
+      })
+      .catch(err => {
+        console.log(err)
       })
     alert('created Hook')
   },
