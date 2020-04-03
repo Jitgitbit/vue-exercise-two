@@ -2,6 +2,10 @@
   <div class="blogs">
     <h2>{{blogTitle}}</h2>
     <button @click='changeTitle'>Change Title</button>
+    <div v-for='post in posts' :key='post.id'>
+      <h3>{{post.title}}</h3>
+      <p>{{post.body}}</p>
+    </div>
   </div>
 </template>
 
