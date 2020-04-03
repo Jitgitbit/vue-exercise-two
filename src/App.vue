@@ -4,6 +4,7 @@
     <NavBar/>
     <AllFriends :friends="friends" @delete='deleteFriend' />
     <OnlineFriends :friends='friends'/>
+    <Blogs/>
   </div>
 </template>
 
@@ -11,13 +12,15 @@
 import NavBar from './NavBar'
 import AllFriends from './AllFriends'
 import OnlineFriends from './OnlineFriends'
+import Blogs from './Blogs'
 
 export default {
   name: 'app',
   components:{                        // ES6 refactoring:         NavBar: NavBar   ==     NavBar    !!!
     NavBar,
     AllFriends,
-    OnlineFriends                                 
+    OnlineFriends,
+    Blogs                                 
   },
   data () {
     return {
