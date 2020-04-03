@@ -27,6 +27,13 @@ export default {
       this.blogTitle = 'Amazing Blog Site'
     }
   },
+  computed:{
+    filteredPosts(){
+      return this.posts.filter(post => {
+        return this.post.title.match(this.searchTerm)
+      })
+    }
+  },
   beforeCreate(){
     alert('beforeCreated Hook')
   },
