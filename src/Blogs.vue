@@ -6,6 +6,8 @@
 </template>
 
 <script>
+import axios from 'axios'
+
 export default {
   name:'Blogs',
   data(){
@@ -22,6 +24,10 @@ export default {
     alert('beforeCreated Hook')
   },
   created(){
+    axios.get('https://jsonplaceholder.typicode.com/posts')
+      .then(response => {
+        console.log(response)
+      })
     alert('created Hook')
   },
   beforeUpdate(){
